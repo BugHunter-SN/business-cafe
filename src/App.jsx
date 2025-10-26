@@ -1,14 +1,24 @@
+import React from "react";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import Hero from "./components/sections/Hero";
+import Services from "./components/sections/Services";
+import WhyChooseUs from "./components/sections/WhyChooseUs";
+import Mission from "./components/sections/Mission";
+import Contact from "./components/sections/Contact";
+
 function App() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-primary text-accent text-center">
-      <h1 className="text-4xl text-accent font-bold mb-4">Business Cafe</h1>
-      <p className="text-lg mb-6 max-w-md">
-        Custom color scheme test — if you see a greenish-to-black gradient, your
-        Tailwind theme colors are working perfectly!
-      </p>
-      <button className="px-6 py-3 bg-accent text-primary font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition duration-300">
-        It Works 🎉
-      </button>
+    <div className="min-h-screen bg-accent">
+      <Header />
+      <main>
+        <Hero />
+        <Services />
+        <WhyChooseUs />
+        <Mission />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }

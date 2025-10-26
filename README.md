@@ -1,16 +1,46 @@
-# React + Vite
+# Business Cafe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive business office website built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - UI library
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **Vercel** - Deployment
 
-## React Compiler
+## 📦 Installation
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Development
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## 🏗️ Build
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🌐 Deployment
+
+This project is configured for automatic deployment to Vercel:
+- `development` branch → Development environment
+- `main` branch → Production environment
+
+## 📁 Project Structure
+
+See folder structure documentation for details.
+
+## ⏱️ Timeline
+
+Project timeline: 1 week
+
+## 🤝 Contributing
+
+1. Create feature branch from `development`
+2. Make changes
+3. Submit PR to `development`
+4. After review, merge to `main` for production
