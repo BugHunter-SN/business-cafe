@@ -1,7 +1,7 @@
 function App() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-primary to-secondary text-accent text-center">
-      <h1 className="text-4xl font-bold mb-4">Business Cafe</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-primary text-accent text-center">
+      <h1 className="text-4xl text-accent font-bold mb-4">Business Cafe</h1>
       <p className="text-lg mb-6 max-w-md">
         Custom color scheme test — if you see a greenish-to-black gradient, your
         Tailwind theme colors are working perfectly!
