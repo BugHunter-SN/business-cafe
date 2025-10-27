@@ -1,11 +1,12 @@
 import React from "react";
+import HeroSectionImage from "/images/Rectangle-1.png";
 
 const Hero = () => {
   return (
     <section id="home" className="relative pt-16 h-screen">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=900&fit=crop"
+          src={HeroSectionImage}
           alt="Modern office workspace"
           className="w-full h-full object-cover"
         />

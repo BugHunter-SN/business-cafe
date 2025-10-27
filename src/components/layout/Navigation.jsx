@@ -1,37 +1,65 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import businessCafeLogo from "/images/business-cafe-logo.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("Home");
 
   const navLinks = [
     { name: "Home", href: "#home" },
-    { name: "Service", href: "#services" },
+    { name: "Space", href: "#services" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <nav className="bg-accent/95 backdrop-blur-sm shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav
+      style={{
+        backgroundColor: "#ffffff",
+        boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.25)",
+      }}
+    >
+      <div
+        className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"
+        style={{ maxWidth: "1280px" }}
+      >
+        <div
+          className="flex justify-between items-center"
+          style={{ height: "86px" }}
+        >
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-accent font-bold text-sm">B</span>
-            </div>
-            <span className="ml-2 text-xl font-semibold text-secondary">
-              Business.info
+          <div className="flex items-center gap-3">
+            <img
+              src={businessCafeLogo}
+              alt="Business Cafe Logo"
+              className="w-10 h-10"
+            />
+            <span className="text-2xl font-bold">
+              <span className="text-secondary">Business</span>{" "}
+              <span style={{ color: "#008874" }}>Cafe</span>
             </span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-12">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-secondary-700 hover:text-primary transition-colors font-medium"
+                onClick={() => setActiveLink(link.name)}
+                className="text-base font-medium transition-colors"
+                style={{
+                  color: activeLink === link.name ? "#008874" : "#000000",
+                }}
+                onMouseEnter={(e) => {
+                  if (activeLink !== link.name)
+                    e.target.style.color = "#008874";
+                }}
+                onMouseLeave={(e) => {
+                  if (activeLink !== link.name)
+                    e.target.style.color = "#000000";
+                }}
               >
                 {link.name}
               </a>
@@ -51,14 +79,25 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-accent border-t border-secondary-100">
+        <div
+          className="md:hidden border-t border-secondary-100"
+          style={{ backgroundColor: "#ffffff" }}
+        >
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block text-secondary-700 hover:text-primary transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setActiveLink(link.name);
+                  setIsMenuOpen(false);
+                }}
+                className={`block text-base font-medium transition-colors ${
+                  activeLink === link.name
+                    ? ""
+                    : "text-secondary-500 hover:text-secondary"
+                }`}
+                style={activeLink === link.name ? { color: "#008874" } : {}}
               >
                 {link.name}
               </a>
