@@ -13,22 +13,73 @@ const Hero = () => {
         <div className="absolute inset-0 bg-secondary/50"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-        <div className="text-accent max-w-3xl">
-          <p className="text-primary text-lg mb-4 font-medium">
-            Best Workspace of the Year
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center">
+        <div className="max-w-3xl text-center">
+          <p
+            className="mb-4 font-medium"
+            style={{
+              color: "#FFFFFF",
+              fontFamily: "Poppins, sans-serif",
+              fontSize: "25px",
+              fontWeight: "500",
+              lineHeight: "100%",
+            }}
+          >
+            The Best WorkSpace in Kigali
           </p>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Work Creative,
+          <h1
+            className="mb-6"
+            style={{
+              color: "#ffffff",
+              fontFamily: "Poppins, sans-serif",
+              fontSize: "40px",
+              fontWeight: "700",
+              lineHeight: "100%",
+            }}
+          >
+            <span style={{ color: "#02BDA1" }}>Professional</span>, Creative,
             <br />
-            Flexible Scalable Workspace
+            Flexible, Scalable{" "}
+            <span style={{ color: "#02BDA1" }}>Workspace</span>
           </h1>
-          <p className="text-xl mb-8 text-secondary-50">
-            We create inspiring workspaces that adapt to your business needs and
-            foster creativity
+          <p
+            className="mb-8 mx-auto"
+            style={{
+              color: "#ffffff",
+              fontFamily: "Poppins, sans-serif",
+              fontSize: "15px",
+              fontWeight: "400",
+              lineHeight: "100%",
+              maxWidth: "714px",
+              height: "auto",
+            }}
+          >
+            Discover your ideal workspace with us. Work smart, not hard in our
+            fully-equipped office spaces. Elevate your business with flexible
+            solutions tailored to your needs. Find your perfect office today!
           </p>
-          <button className="bg-primary hover:bg-primary-600 text-accent px-8 py-3 rounded-md text-lg font-medium transition-all shadow-md hover:shadow-lg">
-            Sign Up
+          <button
+            className="transition-all shadow-md hover:shadow-lg mx-auto"
+            style={{
+              backgroundColor: "#008874",
+              color: "#ffffff",
+              width: "144px",
+              height: "40px",
+              borderRadius: "2px",
+              fontFamily: "Poppins, sans-serif",
+              fontSize: "16px",
+              fontWeight: "700",
+              border: "none",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = "#006d5d";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = "#008874";
+            }}
+          >
+            Explore
           </button>
         </div>
       </div>
