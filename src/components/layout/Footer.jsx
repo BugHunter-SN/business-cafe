@@ -42,7 +42,7 @@ const Footer = () => {
             <p
               className="mb-4 text-sm leading-relaxed"
               style={{
-                color: "#666666",
+                color: "#000000",
                 fontFamily: "Poppins, sans-serif",
               }}
             >
@@ -88,11 +88,11 @@ const Footer = () => {
                   href="#home"
                   className="text-sm transition-colors"
                   style={{
-                    color: "#666666",
+                    color: "#000000",
                     fontFamily: "Poppins, sans-serif",
                   }}
                   onMouseEnter={(e) => (e.target.style.color = "#008874")}
-                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
+                  onMouseLeave={(e) => (e.target.style.color = "#000000")}
                 >
                   Home
                 </a>
@@ -102,11 +102,11 @@ const Footer = () => {
                   href="#space"
                   className="text-sm transition-colors"
                   style={{
-                    color: "#666666",
+                    color: "#000000",
                     fontFamily: "Poppins, sans-serif",
                   }}
                   onMouseEnter={(e) => (e.target.style.color = "#008874")}
-                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
+                  onMouseLeave={(e) => (e.target.style.color = "#000000")}
                 >
                   Space
                 </a>
@@ -116,11 +116,11 @@ const Footer = () => {
                   href="#about"
                   className="text-sm transition-colors"
                   style={{
-                    color: "#666666",
+                    color: "#000000",
                     fontFamily: "Poppins, sans-serif",
                   }}
                   onMouseEnter={(e) => (e.target.style.color = "#008874")}
-                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
+                  onMouseLeave={(e) => (e.target.style.color = "#000000")}
                 >
                   About
                 </a>
@@ -130,11 +130,11 @@ const Footer = () => {
                   href="#contact"
                   className="text-sm transition-colors"
                   style={{
-                    color: "#666666",
+                    color: "#000000",
                     fontFamily: "Poppins, sans-serif",
                   }}
                   onMouseEnter={(e) => (e.target.style.color = "#008874")}
-                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
+                  onMouseLeave={(e) => (e.target.style.color = "#000000")}
                 >
                   Contact
                 </a>
@@ -157,7 +157,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 mt-4 text-sm">
               <li
-                style={{ color: "#666666", fontFamily: "Poppins, sans-serif" }}
+                style={{ color: "#000000", fontFamily: "Poppins, sans-serif" }}
               >
                 <span style={{ fontWeight: "500", color: "#000000" }}>
                   Location:
@@ -168,7 +168,7 @@ const Footer = () => {
                 </span>
               </li>
               <li
-                style={{ color: "#666666", fontFamily: "Poppins, sans-serif" }}
+                style={{ color: "#000000", fontFamily: "Poppins, sans-serif" }}
               >
                 <span style={{ fontWeight: "500", color: "#000000" }}>
                   Email:
@@ -176,15 +176,15 @@ const Footer = () => {
                 <a
                   href="mailto:businesscafe@info.com"
                   className="transition-colors"
-                  style={{ color: "#666666" }}
+                  style={{ color: "#000000" }}
                   onMouseEnter={(e) => (e.target.style.color = "#008874")}
-                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
+                  onMouseLeave={(e) => (e.target.style.color = "#000000")}
                 >
                   businesscafe@info.com
                 </a>
               </li>
               <li
-                style={{ color: "#666666", fontFamily: "Poppins, sans-serif" }}
+                style={{ color: "#000000", fontFamily: "Poppins, sans-serif" }}
               >
                 <span style={{ fontWeight: "500", color: "#000000" }}>
                   Phone:
@@ -192,9 +192,9 @@ const Footer = () => {
                 <a
                   href="tel:+250783787817"
                   className="transition-colors"
-                  style={{ color: "#666666" }}
+                  style={{ color: "#000000" }}
                   onMouseEnter={(e) => (e.target.style.color = "#008874")}
-                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
+                  onMouseLeave={(e) => (e.target.style.color = "#000000")}
                 >
                   +250783787817
                 </a>
@@ -229,7 +229,7 @@ const Footer = () => {
           <p
             className="text-base font-normal"
             style={{
-              color: "#666666",
+              color: "#000000",
               fontFamily: "Poppins, sans-serif",
             }}
           >
