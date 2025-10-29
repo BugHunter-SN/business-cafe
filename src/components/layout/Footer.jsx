@@ -129,7 +129,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://maps.google.com"
+                  href="https://www.google.com/maps/d/viewer?hl=en&ie=UTF8&oe=UTF8&msa=0&mid=1o2cUkUb6MuCeiDOQKlo65xgwxAE&ll=-2.037623841691473%2C30.094707000000014&z=12"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:text-primary-600 transition-colors text-sm font-medium"
