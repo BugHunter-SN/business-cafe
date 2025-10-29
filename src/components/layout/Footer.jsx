@@ -16,8 +16,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-accent border-t border-secondary-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer
+      style={{ backgroundColor: "#ffffff", borderTop: "1px solid #e0e0e0" }}
+    >
+      <div
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+        style={{ maxWidth: "1280px" }}
+      >
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           {/* Business Cafe */}
           <div>
@@ -28,13 +33,19 @@ const Footer = () => {
                 alt="Business Cafe Logo"
                 className="w-10 h-10"
               />
-
-              <h3 className="text-xl font-semibold text-secondary ">
-                Business <span className="text-primary">Cafe</span>
+              <h3 className="text-xl font-bold">
+                <span style={{ color: "#000000" }}>Business</span>{" "}
+                <span style={{ color: "#008874" }}>Cafe</span>
               </h3>
             </div>
 
-            <p className="text-secondary-600 mb-4 text-sm leading-relaxed">
+            <p
+              className="mb-4 text-sm leading-relaxed"
+              style={{
+                color: "#666666",
+                fontFamily: "Poppins, sans-serif",
+              }}
+            >
               Discover your ideal workspace with us. Work smart, not hard in our
               fully-equipped office spaces.
             </p>
@@ -60,14 +71,28 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-secondary mb-4 border-b-2 border-primary pb-2 inline-block">
+            <h4
+              className="mb-4 pb-2 inline-block"
+              style={{
+                color: "#000000",
+                fontFamily: "Poppins, sans-serif",
+                fontWeight: "600",
+                borderBottom: "2px solid #008874",
+              }}
+            >
               Quick Links
             </h4>
             <ul className="space-y-2 mt-4">
               <li>
                 <a
                   href="#home"
-                  className="text-secondary-600 hover:text-primary transition-colors text-sm"
+                  className="text-sm transition-colors"
+                  style={{
+                    color: "#666666",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = "#008874")}
+                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
                 >
                   Home
                 </a>
@@ -75,7 +100,13 @@ const Footer = () => {
               <li>
                 <a
                   href="#space"
-                  className="text-secondary-600 hover:text-primary transition-colors text-sm"
+                  className="text-sm transition-colors"
+                  style={{
+                    color: "#666666",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = "#008874")}
+                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
                 >
                   Space
                 </a>
@@ -83,7 +114,13 @@ const Footer = () => {
               <li>
                 <a
                   href="#about"
-                  className="text-secondary-600 hover:text-primary transition-colors text-sm"
+                  className="text-sm transition-colors"
+                  style={{
+                    color: "#666666",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = "#008874")}
+                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
                 >
                   About
                 </a>
@@ -91,7 +128,13 @@ const Footer = () => {
               <li>
                 <a
                   href="#contact"
-                  className="text-secondary-600 hover:text-primary transition-colors text-sm"
+                  className="text-sm transition-colors"
+                  style={{
+                    color: "#666666",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = "#008874")}
+                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
                 >
                   Contact
                 </a>
@@ -101,38 +144,75 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-secondary mb-4 border-b-2 border-primary pb-2 inline-block">
+            <h4
+              className="mb-4 pb-2 inline-block"
+              style={{
+                color: "#000000",
+                fontFamily: "Poppins, sans-serif",
+                fontWeight: "600",
+                borderBottom: "2px solid #008874",
+              }}
+            >
               Contact Info
             </h4>
             <ul className="space-y-2 mt-4 text-sm">
-              <li className="text-secondary-600">
-                <span className="font-medium text-secondary">Location:</span>{" "}
-                Kigali, <span className="text-primary font-medium">Rwanda</span>
+              <li
+                style={{ color: "#666666", fontFamily: "Poppins, sans-serif" }}
+              >
+                <span style={{ fontWeight: "500", color: "#000000" }}>
+                  Location:
+                </span>{" "}
+                Kigali,{" "}
+                <span style={{ color: "#008874", fontWeight: "500" }}>
+                  Rwanda
+                </span>
               </li>
-              <li className="text-secondary-600">
-                <span className="font-medium text-secondary">Email:</span>{" "}
+              <li
+                style={{ color: "#666666", fontFamily: "Poppins, sans-serif" }}
+              >
+                <span style={{ fontWeight: "500", color: "#000000" }}>
+                  Email:
+                </span>{" "}
                 <a
                   href="mailto:businesscafe@info.com"
-                  className="hover:text-primary transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#666666" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#008874")}
+                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
                 >
                   businesscafe@info.com
                 </a>
               </li>
-              <li className="text-secondary-600">
-                <span className="font-medium text-secondary">Phone:</span>{" "}
+              <li
+                style={{ color: "#666666", fontFamily: "Poppins, sans-serif" }}
+              >
+                <span style={{ fontWeight: "500", color: "#000000" }}>
+                  Phone:
+                </span>{" "}
                 <a
                   href="tel:+250783787817"
-                  className="hover:text-primary transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#666666" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#008874")}
+                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
                 >
                   +250783787817
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.google.com/maps/d/viewer?hl=en&ie=UTF8&oe=UTF8&msa=0&mid=1o2cUkUb6MuCeiDOQKlo65xgwxAE&ll=-2.037623841691473%2C30.094707000000014&z=12"
+                  href="https://www.google.com/maps/d/viewer?hl=en&ie=UTF8&oe=UTF8&msa=0&mid=1o2cUkUb6MuCeiDOQKlo65xgwxAE&ll=-2.037623841691486%2C30.094707000000014&z=12"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-primary-600 transition-colors text-sm font-medium"
+                  className="text-sm transition-colors"
+                  style={{
+                    color: "#008874",
+                    fontFamily: "Poppins, sans-serif",
+                    fontWeight: "500",
+                    textDecoration: "underline",
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = "#006d5d")}
+                  onMouseLeave={(e) => (e.target.style.color = "#008874")}
                 >
                   View Location on GoogleMap
                 </a>
@@ -142,9 +222,18 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-secondary-100 pt-6 text-center">
-          <p className="text-secondary-600 text-base font-normal leading-none">
-            Copyright © {currentYear} Business Cafe. All rights reserved.
+        <div
+          className="pt-6 text-center"
+          style={{ borderTop: "1px solid #e0e0e0" }}
+        >
+          <p
+            className="text-base font-normal"
+            style={{
+              color: "#666666",
+              fontFamily: "Poppins, sans-serif",
+            }}
+          >
+            Copyright &copy; {currentYear} Business Cafe. All rights reserved.
           </p>
         </div>
       </div>
