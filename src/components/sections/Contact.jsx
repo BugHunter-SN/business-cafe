@@ -41,8 +41,8 @@ const Contact = () => {
             <div className="flex flex-col gap-10">
               {/* ADDRESS */}
               <div className="flex items-start gap-4">
-                <div className="w-[65px] h-[65px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
-                  <div className="w-[53px] h-[53px] bg-[#008874] rounded-full flex items-center justify-center">
+                <div className="w-[70px] h-[70px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-[60px] h-[60px] bg-[#008874] rounded-full flex items-center justify-center">
                     <img
                       src={LocationIcon}
                       alt="Location"
@@ -51,10 +51,10 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-bold text-black text-base mb-1">
+                  <h4 className="font-inter font-semibold text-[20px] leading-none text-black mb-1">
                     Address
                   </h4>
-                  <p className="font-poppins text-gray-600 text-sm">
+                  <p className="font-inter font-semibold text-[15px] leading-none text-[#656565]">
                     Location KG 9 Ave, Kigali
                   </p>
                 </div>
@@ -62,18 +62,18 @@ const Contact = () => {
 
               {/* EMAIL */}
               <div className="flex items-start gap-4">
-                <div className="w-[65px] h-[65px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
-                  <div className="w-[53px] h-[53px] bg-[#008874] rounded-full flex items-center justify-center">
+                <div className="w-[70px] h-[70px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-[60px] h-[60px] bg-[#008874] rounded-full flex items-center justify-center">
                     <img src={EmailIcon} alt="Email" className="w-12 h-12" />
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-bold text-black text-base mb-1">
+                  <h4 className="font-inter font-semibold text-[20px] leading-none text-black mb-1">
                     Email
                   </h4>
                   <a
                     href="mailto:businesscafe@info.com"
-                    className="text-gray-600 text-sm font-poppins underline hover:text-[#008874] transition-colors"
+                    className="font-inter font-semibold text-[15px] leading-none text-[#656565] underline hover:text-[#008874] transition-colors"
                   >
                     businesscafe@info.com
                   </a>
@@ -82,18 +82,18 @@ const Contact = () => {
 
               {/* PHONE */}
               <div className="flex items-start gap-4">
-                <div className="w-[65px] h-[65px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
-                  <div className="w-[53px] h-[53px] bg-[#008874] rounded-full flex items-center justify-center">
+                <div className="w-[70px] h-[70px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-[60px] h-[60px] bg-[#008874] rounded-full flex items-center justify-center">
                     <img src={PhoneIcon} alt="Phone" className="w-12 h-12" />
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-bold text-black text-base mb-1">
+                  <h4 className="font-inter font-semibold text-[20px] leading-none text-black mb-1">
                     Phone
                   </h4>
                   <a
                     href="tel:+250788183828"
-                    className="text-gray-600 text-sm font-poppins hover:text-[#008874] transition-colors"
+                    className="font-inter font-semibold text-[15px] leading-none text-[#656565] hover:text-[#008874] transition-colors"
                   >
                     +250788183828
                   </a>
