@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
-import ContactInfo from "../common/ContactInfo";
+import LocationIcon from "/images/location-icon.png";
+import EmailIcon from "/images/email-icon.png";
+import PhoneIcon from "/images/phone-icon.png";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,127 +11,153 @@ const Contact = () => {
     message: "",
   });
 
-  const contactDetails = [
-    {
-      icon: MapPin,
-      title: "Address",
-      content: "123 Business Avenue, Suite 100\nNew York, NY 10001",
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      content: "info@business.com",
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      content: "+1 (555) 123-4567",
-    },
-    {
-      icon: Clock,
-      title: "Office Time",
-      content: "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday - Sunday: Closed",
-    },
-  ];
-
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Message sent successfully!");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    console.log(formData);
   };
 
   return (
-    <section id="contact" className="py-20 bg-secondary-50">
+    <section id="contact" className="bg-gray-100 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div>
-            <h2 className="text-3xl font-bold text-secondary mb-8">
-              Say Hello
-            </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* LEFT SIDE */}
+          <div className="flex flex-col gap-10">
+            <div>
+              <p className="text-[#008874] font-poppins font-bold text-lg mb-2">
+                Contact Us
+              </p>
+              <h2 className="text-black font-poppins font-bold text-3xl sm:text-4xl mb-10">
+                Say Hello
+              </h2>
+            </div>
 
-            <div className="space-y-6">
-              {contactDetails.map((detail, index) => (
-                <ContactInfo key={index} {...detail} />
-              ))}
+            <div className="flex flex-col gap-10">
+              {/* ADDRESS */}
+              <div className="flex items-start gap-4">
+                <div className="w-[70px] h-[70px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-[60px] h-[60px] bg-[#008874] rounded-full flex items-center justify-center">
+                    <img
+                      src={LocationIcon}
+                      alt="Location"
+                      className="w-12 h-12"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-inter font-semibold text-[20px] leading-none text-black mb-1">
+                    Address
+                  </h4>
+                  <p className="font-inter font-semibold text-[15px] leading-none text-[#656565]">
+                    Location KG 9 Ave, Kigali
+                  </p>
+                </div>
+              </div>
+
+              {/* EMAIL */}
+              <div className="flex items-start gap-4">
+                <div className="w-[70px] h-[70px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-[60px] h-[60px] bg-[#008874] rounded-full flex items-center justify-center">
+                    <img src={EmailIcon} alt="Email" className="w-12 h-12" />
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-inter font-semibold text-[20px] leading-none text-black mb-1">
+                    Email
+                  </h4>
+                  <a
+                    href="mailto:businesscafe@info.com"
+                    className="font-inter font-semibold text-[15px] leading-none text-[#656565] underline hover:text-[#008874] transition-colors"
+                  >
+                    businesscafe@info.com
+                  </a>
+                </div>
+              </div>
+
+              {/* PHONE */}
+              <div className="flex items-start gap-4">
+                <div className="w-[70px] h-[70px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-[60px] h-[60px] bg-[#008874] rounded-full flex items-center justify-center">
+                    <img src={PhoneIcon} alt="Phone" className="w-12 h-12" />
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-inter font-semibold text-[20px] leading-none text-black mb-1">
+                    Phone
+                  </h4>
+                  <a
+                    href="tel:+250788183828"
+                    className="font-inter font-semibold text-[15px] leading-none text-[#656565] hover:text-[#008874] transition-colors"
+                  >
+                    +250788183828
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* RIGHT SIDE (FORM) */}
           <div>
-            <h2 className="text-3xl font-bold text-secondary mb-8">
+            <p className="text-[#008874] font-poppins font-bold text-lg mb-2">
+              Have Question ?
+            </p>
+            <h2 className="text-black font-poppins font-bold text-3xl sm:text-4xl mb-8">
               Send a Message
             </h2>
 
-            <div className="space-y-6">
-              <div>
-                <label className="block text-secondary-700 mb-2 font-medium">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-secondary-200 rounded-sm focus:outline-none focus:ring-md focus:ring-primary focus:border-primary transition-all"
-                  placeholder="Your name"
-                />
-              </div>
+            <form onSubmit={handleSubmit} className="flex flex-col">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full h-[57px] px-4 mb-4 border border-[#008874] rounded-md font-poppins text-[15px] outline-none focus:ring-2 focus:ring-[#008874] transition"
+              />
 
-              <div>
-                <label className="block text-secondary-700 mb-2 font-medium">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-secondary-200 rounded-sm focus:outline-none focus:ring-md focus:ring-primary focus:border-primary transition-all"
-                  placeholder="your.email@example.com"
-                />
-              </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full h-[57px] px-4 mb-4 border border-[#008874] rounded-md font-poppins text-[15px] outline-none focus:ring-2 focus:ring-[#008874] transition"
+              />
 
-              <div>
-                <label className="block text-secondary-700 mb-2 font-medium">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-secondary-200 rounded-sm focus:outline-none focus:ring-md focus:ring-primary focus:border-primary transition-all"
-                  placeholder="How can we help?"
-                />
-              </div>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                className="w-full h-[57px] px-4 mb-4 border border-[#008874] rounded-md font-poppins text-[15px] outline-none focus:ring-2 focus:ring-[#008874] transition"
+              />
 
-              <div>
-                <label className="block text-secondary-700 mb-2 font-medium">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="4"
-                  className="w-full px-4 py-3 border border-secondary-200 rounded-sm focus:outline-none focus:ring-md focus:ring-primary focus:border-primary transition-all resize-none"
-                  placeholder="Tell us more about your needs..."
-                ></textarea>
-              </div>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="w-full h-32 px-4 py-3 mb-4 border border-[#008874] rounded-md font-poppins text-[15px] outline-none resize-y focus:ring-2 focus:ring-[#008874] transition"
+              />
 
               <button
-                onClick={handleSubmit}
-                className="bg-primary hover:bg-primary-600 text-accent px-8 py-3 rounded-md font-medium transition-all shadow-md hover:shadow-lg w-full md:w-auto"
+                type="submit"
+                className="w-[174px] h-[49px] bg-[#008874] text-white rounded-md font-poppins text-[15px] font-medium hover:bg-[#006d5d] transition"
               >
                 Send Message
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
