@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import LocationIcon from "/images/location-icon.png";
+import EmailIcon from "/images/email-icon.png";
+import PhoneIcon from "/images/phone-icon.png";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,216 +20,98 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log(formData);
   };
 
   return (
-    <section
-      id="contact"
-      style={{ backgroundColor: "#f5f5f5", padding: "80px 0" }}
-    >
-      <div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        style={{ maxWidth: "1280px" }}
-      >
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Left Side - Contact Info */}
-          <div>
-            <p
-              style={{
-                color: "#008874",
-                fontFamily: "Poppins, sans-serif",
-                fontSize: "14px",
-                fontWeight: "600",
-                marginBottom: "8px",
-              }}
-            >
-              Contact Us
-            </p>
-            <h2
-              style={{
-                color: "#000000",
-                fontFamily: "Poppins, sans-serif",
-                fontSize: "32px",
-                fontWeight: "700",
-                marginBottom: "32px",
-              }}
-            >
-              Say Hello
-            </h2>
-
-            {/* Address */}
-            <div className="flex items-start gap-4 mb-6">
-              <div
-                style={{
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "#008874",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
-                }}
-              >
-                <img
-                  src="/images/location-icon.png"
-                  alt="Location"
-                  style={{ width: "24px", height: "24px" }}
-                />
-              </div>
-              <div>
-                <h4
-                  style={{
-                    color: "#000000",
-                    fontFamily: "Poppins, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: "700",
-                    marginBottom: "4px",
-                  }}
-                >
-                  Address
-                </h4>
-                <p
-                  style={{
-                    color: "#666666",
-                    fontFamily: "Poppins, sans-serif",
-                    fontSize: "14px",
-                    fontWeight: "400",
-                  }}
-                >
-                  Location: KG 9 Ave, Kigali
-                </p>
-              </div>
+    <section id="contact" className="bg-gray-100 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* LEFT SIDE */}
+          <div className="flex flex-col gap-10">
+            <div>
+              <p className="text-[#008874] font-poppins font-bold text-lg mb-2">
+                Contact Us
+              </p>
+              <h2 className="text-black font-poppins font-bold text-3xl sm:text-4xl mb-10">
+                Say Hello
+              </h2>
             </div>
 
-            {/* Email */}
-            <div className="flex items-start gap-4 mb-6">
-              <div
-                style={{
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "#008874",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
-                }}
-              >
-                <img
-                  src="/images/email-icon.png"
-                  alt="Email"
-                  style={{ width: "24px", height: "24px" }}
-                />
+            <div className="flex flex-col gap-10">
+              {/* ADDRESS */}
+              <div className="flex items-start gap-4">
+                <div className="w-[65px] h-[65px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-[53px] h-[53px] bg-[#008874] rounded-full flex items-center justify-center">
+                    <img
+                      src={LocationIcon}
+                      alt="Location"
+                      className="w-12 h-12"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-poppins font-bold text-black text-base mb-1">
+                    Address
+                  </h4>
+                  <p className="font-poppins text-gray-600 text-sm">
+                    Location KG 9 Ave, Kigali
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4
-                  style={{
-                    color: "#000000",
-                    fontFamily: "Poppins, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: "700",
-                    marginBottom: "4px",
-                  }}
-                >
-                  Email
-                </h4>
-                <a
-                  href="mailto:businesscafekigali@info.com"
-                  style={{
-                    color: "#666666",
-                    fontFamily: "Poppins, sans-serif",
-                    fontSize: "14px",
-                    fontWeight: "400",
-                    textDecoration: "none",
-                  }}
-                  onMouseEnter={(e) => (e.target.style.color = "#008874")}
-                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
-                >
-                  businesscafekigali@info.com
-                </a>
-              </div>
-            </div>
 
-            {/* Phone */}
-            <div className="flex items-start gap-4">
-              <div
-                style={{
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: "#008874",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
-                }}
-              >
-                <img
-                  src="/images/phone-icon.png"
-                  alt="Phone"
-                  style={{ width: "24px", height: "24px" }}
-                />
+              {/* EMAIL */}
+              <div className="flex items-start gap-4">
+                <div className="w-[65px] h-[65px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-[53px] h-[53px] bg-[#008874] rounded-full flex items-center justify-center">
+                    <img src={EmailIcon} alt="Email" className="w-12 h-12" />
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-poppins font-bold text-black text-base mb-1">
+                    Email
+                  </h4>
+                  <a
+                    href="mailto:businesscafe@info.com"
+                    className="text-gray-600 text-sm font-poppins underline hover:text-[#008874] transition-colors"
+                  >
+                    businesscafe@info.com
+                  </a>
+                </div>
               </div>
-              <div>
-                <h4
-                  style={{
-                    color: "#000000",
-                    fontFamily: "Poppins, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: "700",
-                    marginBottom: "4px",
-                  }}
-                >
-                  Phone
-                </h4>
-                <a
-                  href="tel:+250788383838"
-                  style={{
-                    color: "#666666",
-                    fontFamily: "Poppins, sans-serif",
-                    fontSize: "14px",
-                    fontWeight: "400",
-                    textDecoration: "none",
-                  }}
-                  onMouseEnter={(e) => (e.target.style.color = "#008874")}
-                  onMouseLeave={(e) => (e.target.style.color = "#666666")}
-                >
-                  +250788383838
-                </a>
+
+              {/* PHONE */}
+              <div className="flex items-start gap-4">
+                <div className="w-[65px] h-[65px] border-2 border-dotted border-[#008874] rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-[53px] h-[53px] bg-[#008874] rounded-full flex items-center justify-center">
+                    <img src={PhoneIcon} alt="Phone" className="w-12 h-12" />
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-poppins font-bold text-black text-base mb-1">
+                    Phone
+                  </h4>
+                  <a
+                    href="tel:+250788183828"
+                    className="text-gray-600 text-sm font-poppins hover:text-[#008874] transition-colors"
+                  >
+                    +250788183828
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Side - Contact Form */}
+          {/* RIGHT SIDE (FORM) */}
           <div>
-            <p
-              style={{
-                color: "#008874",
-                fontFamily: "Poppins, sans-serif",
-                fontSize: "14px",
-                fontWeight: "600",
-                marginBottom: "8px",
-              }}
-            >
+            <p className="text-[#008874] font-poppins font-bold text-lg mb-2">
               Have Question ?
             </p>
-            <h2
-              style={{
-                color: "#000000",
-                fontFamily: "Poppins, sans-serif",
-                fontSize: "32px",
-                fontWeight: "700",
-                marginBottom: "32px",
-              }}
-            >
+            <h2 className="text-black font-poppins font-bold text-3xl sm:text-4xl mb-8">
               Send a Message
             </h2>
 
-            <form onSubmit={handleSubmit}>
-              {/* Name Input */}
+            <form onSubmit={handleSubmit} className="flex flex-col">
               <input
                 type="text"
                 name="name"
@@ -234,19 +119,9 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                style={{
-                  width: "100%",
-                  padding: "12px 16px",
-                  marginBottom: "16px",
-                  border: "1px solid #008874",
-                  borderRadius: "4px",
-                  fontFamily: "Poppins, sans-serif",
-                  fontSize: "14px",
-                  outline: "none",
-                }}
+                className="w-full h-[57px] px-4 mb-4 border border-[#008874] rounded-md font-poppins text-[15px] outline-none focus:ring-2 focus:ring-[#008874] transition"
               />
 
-              {/* Email Input */}
               <input
                 type="email"
                 name="email"
@@ -254,19 +129,9 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                style={{
-                  width: "100%",
-                  padding: "12px 16px",
-                  marginBottom: "16px",
-                  border: "1px solid #008874",
-                  borderRadius: "4px",
-                  fontFamily: "Poppins, sans-serif",
-                  fontSize: "14px",
-                  outline: "none",
-                }}
+                className="w-full h-[57px] px-4 mb-4 border border-[#008874] rounded-md font-poppins text-[15px] outline-none focus:ring-2 focus:ring-[#008874] transition"
               />
 
-              {/* Subject Input */}
               <input
                 type="text"
                 name="subject"
@@ -274,60 +139,21 @@ const Contact = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                style={{
-                  width: "100%",
-                  padding: "12px 16px",
-                  marginBottom: "16px",
-                  border: "1px solid #008874",
-                  borderRadius: "4px",
-                  fontFamily: "Poppins, sans-serif",
-                  fontSize: "14px",
-                  outline: "none",
-                }}
+                className="w-full h-[57px] px-4 mb-4 border border-[#008874] rounded-md font-poppins text-[15px] outline-none focus:ring-2 focus:ring-[#008874] transition"
               />
 
-              {/* Message Textarea */}
               <textarea
                 name="message"
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows="5"
-                style={{
-                  width: "100%",
-                  padding: "12px 16px",
-                  marginBottom: "16px",
-                  border: "1px solid #008874",
-                  borderRadius: "4px",
-                  fontFamily: "Poppins, sans-serif",
-                  fontSize: "14px",
-                  outline: "none",
-                  resize: "vertical",
-                }}
+                className="w-full h-32 px-4 py-3 mb-4 border border-[#008874] rounded-md font-poppins text-[15px] outline-none resize-y focus:ring-2 focus:ring-[#008874] transition"
               />
 
-              {/* Submit Button */}
               <button
                 type="submit"
-                style={{
-                  backgroundColor: "#008874",
-                  color: "#ffffff",
-                  padding: "12px 32px",
-                  border: "none",
-                  borderRadius: "4px",
-                  fontFamily: "Poppins, sans-serif",
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  cursor: "pointer",
-                  transition: "background-color 0.3s",
-                }}
-                onMouseEnter={(e) =>
-                  (e.target.style.backgroundColor = "#006d5d")
-                }
-                onMouseLeave={(e) =>
-                  (e.target.style.backgroundColor = "#008874")
-                }
+                className="w-[174px] h-[49px] bg-[#008874] text-white rounded-md font-poppins text-[15px] font-medium hover:bg-[#006d5d] transition"
               >
                 Send Message
               </button>
